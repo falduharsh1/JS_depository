@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel - Movie Booking System</title>
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+
+<body>
+  <div class="movie_ticket">
+    <div class="side_bar">
+      <h1>Movie Booking Admin</h1>
+      <div class="menus">
+        <ul>
+            <li><a href="admin.html">Dashboard</a></li> 
+            <li><a href="manage_movie.html">Manage Movies</a></li>
+            <li><a href="manage_time.html">Manage Time</a></li>
+            <li><a href="manage_sit.html">Manage Sit</a></li>
+            <li><a href="javascript:navigateTo('reports.html')">Reports</a></li>
+            <li><a href="javascript:navigateTo('settings.html')">Settings</a></li>
+            <li><a href="javascript:navigateTo('logout.html')">Logout</a></li>
+  
+
+        </ul>
+      </div>
+    </div>
+    <div class="main_bar">
+      <div class="dash_board">
+        <div class="dis">
+          <h2>Dashboard</h2>
+          <p>Hello ! Time</p>
+        </div>
+      </div>
+      <div class="display">
+        <div class="slide">
+          <p class="movie">Total Movies</p>
+          <p class="num">999</p>
+        </div>
+
+        <div class="slide">
+          <p class="movie">Total Booking</p>
+          <p class="num">999</p>
+        </div>
+
+        <div class="slide">
+          <p class="movie">Total Users</p>
+          <p class="num">999</p>
+        </div>
+      </div>
+
+      <button class="btn-open-popup" onclick="togglePopup()">
+        Open Popup Form
+      </button>
+
+      <div id="popupOverlay" class="overlay-container">
+        <div class="popup-box">
+          <h2 style="color: green">Popup Form</h2>
+          <form class="form-container" id="Time_form">
+
+            <label class="form-label" for="name"> Select Cinema: </label>
+            <select name="" id="xyz" class="form-input" onchange="handleChange()">
+                <option value="0" id="allCinema">Select cinema</option>
+              </select>
+
+            <label class="form-label" for="movie">Select Movies:</label>
+            <select name="" id="movie" class="form-input">
+                <option value="0" id="allMovie">Select Movie</option>
+              </select>
+
+              <span>Start date:</span>
+              <input type="date" id="st_data">
+              <br>
+
+              <span>End date:</span>
+              <input type="date" id="ed_data">
+              <br>
+
+              <div id="all-times">
+                <div id="row-8574">
+                  <input type="time" name="timeD">
+                  <button onclick="handleTime()">+</button>
+                </div>
+              </div>
+
+              <br><br>
+
+            <button class="btn-submit" type="submit">Submit</button> 
+            
+          </form>
+
+          <button class="btn-close-popup" onclick="togglePopup()">
+            Close
+          </button>
+        </div>
+      </div>
+
+      <h2 id="manage">Manage Time</h2>
+
+      <div id="display_time">
+
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/manage_time.js"></script>
+</body>
+
+</html>
+

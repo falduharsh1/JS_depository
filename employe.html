@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        .error {
+            color: red;
+            font-size: 90%;
+        }
+    </style>
+
+    <form action="" onsubmit="handlesubmit()">
+
+    <input type="text" name="name" id="name" placeholder="enter name">
+    <span class="error" id="NameError"></span>
+    <br><br>
+
+    <input type="date" name="jd" id="jd">
+    <span class="error" id="JoinError"></span>
+    <br><br>
+
+    <input type="number" name="sal" id="sal" placeholder="enter salary">
+    <span class="error" id="SalError"></span>
+    <br><br>
+
+    <input type="submit">
+    <br><br>
+
+    </form>
+
+    <input type="search" name="search" id="search" placeholder="search..." onkeyup="handlesearchsort()">
+    
+    <select name="sort" id="sorting" onchange="handlesearchsort()">
+        <option value="0">--Select Sort--</option>
+        <option value="a_z">Sort : a to z</option>
+        <option value="z_a">Sort : z to a</option>
+        <option value="l_h">Sort : Lower to High</option>
+        <option value="h_l">Sort : High to Lower</option>
+    </select>
+    <br><br>
+    
+    <div id="disp">
+
+    </div>
+
+    <script src="js/employe.js"></script>
+</body>
+</html>

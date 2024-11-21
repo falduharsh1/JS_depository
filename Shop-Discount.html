@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="" onsubmit="handlesubmit()">
+
+    <select name="shop" id="shoping" onchange="handleselect()">
+        <option value="0">--Select items--</option>
+        <option value="Laptop">Laptop</option>
+        <option value="Washing Machine">Washing Machine</option>
+        <option value="Tv">T.V.</option>
+        <option value="Ac">A.C.</option>
+    </select>
+
+    <br><br>
+
+    <input type="number" name="dis" id="discount" placeholder="Enter Discount">
+    <br><br>
+
+    <input type="submit">   
+
+    </form>
+    <br>
+    <div id="disp">
+
+    </div>
+
+    <script src="js/Shop-Discount.js"></script>
+</body>
+</html>

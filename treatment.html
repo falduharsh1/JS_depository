@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+     select {
+        padding: 10px;
+        font-size: 18px;
+        border-radius: 20px;
+        border: 2px solid #3498db;
+        color: #2c3e50;
+        margin: 30px 0 -10px 20px;
+    }
+
+    select:hover {
+      background-color: #3498DB;
+    }
+
+    option {
+      background-color: #ecf0f1;
+      color: #2c3e50;
+    }
+
+    option:hover {
+      background-color: #2980b9;
+      color: #fff;
+    }  
+
+    #one {
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 10%;
+   
+    }
+
+table {
+    width: 100%;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #3498db;
+    color: #fff;
+}
+
+form {
+    margin-top: 15px;
+}
+
+.sub{
+    border-radius: 5px;
+    margin-top: 10px;
+   
+}
+
+.sub:hover{
+    background-color: rgb(114, 241, 114);
+}
+        
+    </style>
+        <select name="doc-treat" id="doctor" onchange="treatChang ()">
+            <option value="0">--Select Treatment--</option>
+            <option value="Teeth Cleanings">Teeth Cleanings</option>
+            <option value="Fillings">Fillings</option>
+            <option value="Root Canal Treatment">Root Canal Treatment</option>
+            <option value="RCT + Cover">RCT + Cover</option>
+            <option value="Braces/Invisalign">Braces/Invisalign</option>
+     </select>
+     <br><br>
+     
+        <div id="one">
+
+            <table border="1">
+                <tr>
+                    <th>Treatment</th>
+                    <th>Seating</th>
+                    <th>Costing</th>
+                </tr>
+                <tr>
+                    <td id="t1"></td>
+                    <td id="t2"></td>
+                    <td id="t3"></td>
+                </tr>
+            </table>
+            <br><br>
+
+            Appoinment Date :
+            <form action="" onsubmit="handlesubmit ()">
+               <input type="date" name="apt-date" id="apt_date">
+               <input class="sub" type="submit">
+
+            </form>        
+        </div>
+        <br><br>
+
+        <div id="disp"> </div>
+
+        
+    <script src="js/treatment.js"></script>
+</body>
+</html>

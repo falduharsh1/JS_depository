@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel - Movie Booking System</title>
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+
+<body>
+  <div class="movie_ticket">
+    <div class="side_bar">
+      <h1>Movie Booking Admin</h1>
+      <div class="menus">
+        <ul>
+            <li><a href="admin.html">Dashboard</a></li> 
+            <li><a href="manage_movie.html">Manage Movies</a></li>
+            <li><a href="manage_time.html">Manage Time</a></li>
+            <li><a href="manage_sit.html">Manage Sit</a></li>
+            <li><a href="javascript:navigateTo('reports.html')">Reports</a></li>
+            <li><a href="javascript:navigateTo('settings.html')">Settings</a></li>
+            <li><a href="javascript:navigateTo('logout.html')">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="main_bar">
+      <div class="dash_board">
+        <div class="dis">
+          <h2>Dashboard</h2>
+          <p>Hello ! sit</p>
+        </div>
+      </div>
+      <div class="display">
+        <div class="slide">
+          <p class="movie">Total Movies</p>
+          <p class="num">999</p>
+        </div>
+
+        <div class="slide">
+          <p class="movie">Total Booking</p>
+          <p class="num">999</p>
+        </div>
+
+        <div class="slide">
+          <p class="movie">Total Users</p>
+          <p class="num">999</p>
+        </div>
+      </div>
+
+      <button class="btn-open-popup" onclick="togglePopup()">
+        Open Popup Form
+      </button>
+
+      <div id="popupOverlay" class="overlay-container">
+        <div class="popup-box">
+          <h2 style="color: green">Popup Form</h2>
+          
+          <form class="form-container" id="sit_form">
+
+            <label class="form-label" for="name"> Select Cinemas: </label>
+            <select name="" id="xyz" class="form-input" onchange="handleChange()">
+                <option value="0" id="allCinema">Select cinema</option>
+              </select>
+
+            <label class="form-label" for="movie">Select Movies:</label>
+            <select name="" id="movie" class="form-input" onchange="handleTimeChange()">
+                <option value="0" id="allMovie">Select Movie</option>
+              </select>
+
+            <label class="form-label" for="time">Select Times:</label>
+            <select name="" id="time" class="form-input">
+                <option value="0" id="allTime">Select Time</option>
+              </select>
+
+              <label class="form-label" for="time">Select No of Sit:</label>
+              <input type="text" name="sit" id="no_sit"  class="form-input" placeholder="Enter No of Sit">
+
+              <label class="form-label" for="time">Price:</label>
+              <input type="number" name="price" id="price"  class="form-input" placeholder="Enter Price">
+
+            <button class="btn-submit" type="submit">Submit</button> 
+            
+          </form>
+
+          <button class="btn-close-popup" onclick="togglePopup()">
+            Close
+          </button>
+        </div>
+      </div>
+
+      
+
+      <!-- </table> -->
+      <h2 id="manage">Manage Sit</h2>
+
+      <div id="Display_sit">
+
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/manage_sit.js"></script>
+</body>
+
+</html>
+

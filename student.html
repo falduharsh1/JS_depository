@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="" onsubmit="handlesubmit()">
+        <input type="text" name="name" id="name" placeholder="Enter your name">
+        <br><br>
+        <input type="number" name="numr" id="num" placeholder="Enter your Roll Number">
+        <br><br>
+        <input type="text" name="course" id="course" placeholder="Enter your course">
+        <br><br>
+        <input type="number" name="fees" id="fees" placeholder="Enter your fees">
+        <br><br>
+        <input type="submit">
+        <br><br>
+    </form>
+
+    <input type="text" name="search" id="searching" placeholder="search...." onkeyup="handlesearchsort()">
+
+    <select name="selecting" id="choice" onchange="handlesearchsort()">
+        <option value="0">--Select--</option>
+        <option value="a_z">a to z</option>
+        <option value="z_a">z to a</option>
+        <option value="r_l">Roll nu Lower to High</option>
+        <option value="r_h">Roll nu High to Lower</option>
+        <option value="l_h">Fees Lower to High</option>
+        <option value="h_l">Fees High to Lower</option>
+    </select>
+    <br><br>
+
+    <div id="disp">
+
+    </div>
+    
+    <script src="js/student.js"></script>
+</body>
+</html>

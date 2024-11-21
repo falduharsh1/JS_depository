@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App</title>
+    <link rel="stylesheet" href="budget.css">
+</head>
+<body>
+    <h1>BUDGET APP</h1>
+
+    <div class="top-container">
+        <div class="box-1">
+            <form action="" id="budget-add">
+            <h3>Please Enter Your Budget</h3>
+            <input type="number" name="bud" id="budgetInput" placeholder="">
+            <p id="error-bud"></p>
+            <button type="submit" class="cal" id="calculateButton">Calculate</button>
+        </form>
+        </div>
+        
+        <div class="budget-container">  
+            <div class="display">
+                <h3>BUDGET</h3>
+                <div class="dis-img">
+                   <img src="img/money-bill-1-solid.svg" alt="">
+                    <h3 id="bud-num">$0</h3>
+                </div>
+               
+            </div>
+            <div class="display">
+                <h3>EXPENSES</h3>
+                <div class="dis-img">
+                    <img src="img/money-check-solid.svg" alt=""> 
+                    <h3 id="ex-num">$0</h3>                                
+                </div>
+                
+            </div>
+            <div class="display">
+                <h3>BALANCE</h3>
+                <div class="dis-img"></div>
+                <img src="img/hand-holding-dollar-solid.svg" alt="">
+                <h3 id="ba-num">$0</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="second">
+    <div class="box-1" id="box-2">
+        <h3>Please Enter Your Expense Name</h3>
+        <form action="" id="expense-form">
+        <input type="text" name="expenseTitle" id="expenseTitle" placeholder="">
+        <p id="error-expense-title"></p>    
+
+        <h3>Please Enter Your Expense Amount</h3>
+        <input type="number" name="expenseAmount" id="expenseAmount" placeholder="">
+        <p id="error-expense-amount"></p>
+
+        <button type="submit" class="cal" id="addExpenseButton">Add Expense</button>
+        </form>
+        
+    </div>
+
+    <div id="exp-data">
+        <div>
+            <span class="list_item">Name -</span>
+            <span class="list_item">Amount</span>
+            <hr id="hrr">
+            <span class="list_item"></span>
+        </div>
+        <div id="exp-132">
+            <span id="Exp-Title-"></span>
+            <span id="Exp-Value-"></span>
+            <!-- <button></button>
+            <button></button> -->
+        </div>
+    </div>
+    </div>
+
+    <script src="js/budget_exam.js"></script>
+</body>
+</html>
